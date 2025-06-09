@@ -4,6 +4,10 @@ const ProductImages = {
     "samsung": "https://cdn.tgdd.vn/Products/Images/42/303891/samsung-galaxy-s24-ultra-grey-thumb-600x600.jpg",
     "xiaomi": "https://cdn.tgdd.vn/Products/Images/42/299024/xiaomi-redmi-note-13-pro-5g-thumb-den-600x600.jpg"
   };
+  const Price = {
+    "iphone" : "28.000.000VND",
+
+  };
 function Add(){
     let newProduct = document.getElementById("newProd").value;
     ProductNames.push(newProduct);
@@ -20,6 +24,7 @@ function getAll(){
         <td><button onclick = "ShowEdit(${i})">Edit</button></td>
         <td><button onclick = "Del(${i})">Delete</button></td>
         <td><button onclick = ShowImg(${i})>Image</button></td>
+        <td><button onclick = ShowGia(${i})>Price</button></td>
         `
     }
     document.getElementById("items").innerHTML = html;
@@ -62,3 +67,16 @@ function ShowImg(index) {
       document.getElementById("imageDisplay").innerHTML = `<p style="color:red;">Không tìm thấy hình ảnh cho sản phẩm "${ProductNames[index]}"</p>`;
     }
   }
+function ShowGia(index){
+  let priceItems = ProductNames[index].toLowerCase();
+  let priceI = Price[priceItems];
+  if(priceI){
+    document.getElementById("priceDisplay").innerHTML =`
+     <h4>${ProductNames[index]}</h4>
+    <h4>${priceI}</h4>
+    ` 
+  } else{
+    document.getElementById("priceDisplay").innerHTML = "<p>Không có sản phẩm nào</p>"
+
+  }
+}

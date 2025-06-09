@@ -5,13 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
-            background-color: rgb(77, 235, 77);
-            color: white;
-            border: 0;
-            border-radius: 20px;
-            text-align: center;
-        }
+       * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f7f9fc;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+h2 {
+  color: #070a0e;
+  margin-bottom: 12px;
+  font-weight: 700;
+  border-bottom: 5px solid #4deb4d;
+  padding-bottom: 1px;
+}
+
+input#newProd {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #4deb4d;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input#newProd:focus {
+  border-color: #000000;
+  box-shadow: 0 0 8px #2ecc71aa;
+}
+
+button {
+  background-color: #4deb4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #296329;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px #00000011;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4deb4d;
+  color: white;
+  font-weight: 600;
+}
+
+td button {
+  background-color: #2ecc71;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+}
+
+td button:hover {
+  background-color: #27ae60;
+}
+
+#imageDisplay {
+  margin
+
 
     </style>
 </head>
@@ -31,6 +113,7 @@
 
     </table>
     <div id="imageDisplay" style="margin-top: 20px;"></div>
+    <div id="priceDisplay" style="margin-top: 20px;"></div>
 </body>
 <script src ="index.js"></script>
 </html>
